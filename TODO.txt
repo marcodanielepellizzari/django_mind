@@ -19,6 +19,7 @@ WEB:
 -Aggiungere form scelta jolly
 -Chiamata AJAX per aggiornare report
 -Signals per fine gara 
+-spostare risposte da admin a web e integrare con report risultato
 
 GRAFICA
 -definire il tema e le classi CSS relative
@@ -26,10 +27,9 @@ GRAFICA
 
 BACKEND
 -algoritmi di calcolo punteggio dipendenti da tipo
--rating????
 
 
-To study:
+Note:
 -Chiamate AJAX
 -Signals
 -namespace urls

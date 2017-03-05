@@ -1,0 +1,32 @@
+{% extends "demo/base.html" %}
+
+{% block title %} Dettaglio Gara {% endblock %}
+
+{% block titolo %}
+<h1> Dettaglio Gara </h1>
+{% endblock %}
+
+{% block content %}
+<table class="table table-striped">
+	<thead>
+	<tr>
+		<th>Nome Squadra</th>
+		{% for i in num %}
+			<th>{{i}}</th>
+		{% endfor %}
+		<th>Totale</th>
+	</tr>
+	</thead>
+	{% for r in scores %}
+	<tr> <td> {{r.squadra}} </td>
+	{% for p in r.punti %}
+	<td>{{p}}</td>
+	{% endfor %}
+	<td> {{r.totale}} </td></tr>
+	{% endfor %}
+</table>
+
+{% endblock %}
+
+
+
