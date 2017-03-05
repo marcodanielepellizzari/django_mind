@@ -1,0 +1,16 @@
+{% extends "demo/base.html" %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block titolo %}
+<h1> Home page </h1>
+{% endblock %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+<p>Benvenuto {{ request.user.last_name }} {{ request.user.first_name }}</p>
+<p>Effettua il <a href="{% url "demo:logout" %}">logout</a></p>
+{% else %}
+Effettua il <a href="{% url "demo:login" %}">login</a> 
+{% endif %}
+{% endblock %}

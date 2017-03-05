@@ -1,0 +1,36 @@
+GENERALE:
+-abilitare invio mail 
+-notifiche mail inizio gara/risultati
+
+ACCOUNT:
+-pagine di cambio password
+-aggiunta mail "Password dimenticata"
+-registrazione automatica nuovi utenti
+
+
+ADMIN:
+-vincoli e preinserimento valori per Domande
+-Aggiunta bottone Prepara/Inizia per gare
+-Rendere sortable colonne Studente
+-Inserire opzioni ricerca in tutte le tabelle
+
+WEB:
+-Aggiunta pagine riassuntive e di gestione per docenti
+-Aggiungere form scelta jolly
+-Chiamata AJAX per aggiornare report
+-Signals per fine gara 
+
+GRAFICA
+-definire il tema e le classi CSS relative
+-armonizzare grafica parte admin e web
+
+BACKEND
+-algoritmi di calcolo punteggio dipendenti da tipo
+-rating????
+
+
+To study:
+-Chiamate AJAX
+-Signals
+-namespace urls
+
