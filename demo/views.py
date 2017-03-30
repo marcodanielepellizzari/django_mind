@@ -30,6 +30,7 @@ def calcola_punti(idgara):
             punteggi['punti'][j-1]=somma
         punteggi['totale']=sum(punteggi['punti'])
         scoreboard.append(punteggi)
+    scoreboard.sort(key=lambda x:x['totale'])
     return scoreboard
 
 
@@ -39,7 +40,7 @@ def dettagli_gara(request,idgara):
     num_domande=gara.num_domande
     scores=calcola_punti(idgara)
     return render(request, 'demo/dettagli_gara.html',
-            {'scores':scores,'num':range(1,num_domande+1)})
+            {'gara':gara,'scores':scores,'num':range(1,num_domande+1)})
 
 
 
