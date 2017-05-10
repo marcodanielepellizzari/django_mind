@@ -29,6 +29,9 @@ class Gara(models.Model):
     squadre=models.ManyToManyField(Squadra, blank=True)
     stato=models.CharField(max_length=1, default='D',editable=False,
             choices=(('D','Definire domande'),('P','Pronta'),('I','In Corso'),('C','Completata')))
+    squadre_up=models.SmallIntegerField(default=3, verbose_name="Squdre per crescita punteggio")
+    max_risposte_sbagliate=models.SmallIntegerField(default=2,verbose_name="Max risposte sbagliate per crescita punteggio")
+
 
     class Meta:
         verbose_name_plural='Gare'
@@ -70,7 +73,7 @@ class Studente(models.Model):
 class Risposta(models.Model):
     gara=models.ForeignKey(Gara)
     squadra=models.ForeignKey(Squadra)
-    studente=models.ForeignKey(Studente)
+    studente=models.ForeignKey(Studente,blank=True,null=True)
     domanda=models.ForeignKey(Domanda)
     data=models.DateTimeField(auto_now_add=True)
     risposta=models.SmallIntegerField(verbose_name='Risposta Inserita')
