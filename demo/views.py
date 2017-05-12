@@ -4,7 +4,7 @@ from .models import *
 # Create your views here.
 
 def home(request):
-    gare=Gara.objects.all()
+    gare=Gara.objects.all().order_by('-inizio')
     return render(request, 'demo/home.html',{'titolo':'Home Page','gare':gare})
 
 

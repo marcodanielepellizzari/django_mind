@@ -10,6 +10,27 @@
 {% if request.user.is_authenticated %}
 <p>Benvenuto {{ request.user.last_name }} {{ request.user.first_name }}</p>
 <p>Effettua il <a href="{% url "demo:logout" %}">logout</a></p>
+
+<table class="table table-striped">
+	<thead>
+	<tr>
+		<th>Titolo</th>
+		<th>Tipo</th>
+		<th>Domande</th>
+		<th>Inizio</th>
+		<th>Stato</th>
+	</tr>
+	</thead>
+	{% for r in gare %}
+	<tr> 
+		<td> {{r.titolo}} </td>
+		<td> {{r.get_tipo_display}} </td>
+		<td> {{r.num_domande}} </td>
+		<td> {{r.inizio}} </td>
+		<td> {{r.get_stato_display}} </td>
+	</tr>
+	{% endfor %}
+</table>
 {% else %}
 Effettua il <a href="{% url "demo:login" %}">login</a> 
 {% endif %}

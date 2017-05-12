@@ -22,7 +22,7 @@ class Squadra(models.Model):
 
 class Gara(models.Model):
     titolo=models.CharField(max_length=30, verbose_name='Titolo',unique=True)
-    tipo=models.CharField(max_length=1, choices=(('M','Math'),('F','Fisica')))
+    tipo=models.CharField(max_length=1, choices=(('M','Matematica'),('F','Fisica')))
     num_domande=models.SmallIntegerField()
     inizio=models.DateTimeField(blank=True,null=True)
     durata=models.DurationField(default=timedelta(hours=2))
